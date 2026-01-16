@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Country Search</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Country Search</h1>
+
+        <div class="searchbar">
+            <input id="q" type="text" placeholder="ex: romania, germany, france..." />
+            <button id="btn">Search</button>
+        </div>
+
+        <div id="results" class="results"></div>
+
+        <div id="status" class="hint">Type a country name and press „Search".</div>
+    </div>
+
+    <script src="cache.js"></script>
+    <script src="countryService.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
