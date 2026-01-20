@@ -8,23 +8,49 @@
 </head>
 
 <body>
-    <div class="container">
+    <header class="container">
         <h1>Country Search</h1>
 
-        <div class="searchbar">
+        <nav class="searchbar">
             <input id="q" type="text" placeholder="ex: romania, germany, france..." />
             <button id="btn">Search</button>
-        </div>
+            <button id="toggle-theme"> 🌙 </button>
+        </nav>
+    </header>
 
-        <div id="results" class="results"></div>
-
-        <div id="status" class="hint">Type a country name and press „Search".</div>
+    <div class="wrapper">
+        <!-- <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav> -->
+        <main>
+            <section id="results" class="results container"></section>
+            <aside id="status" class="hint">Type a country name and press „Search".</aside>
+        </main>
+        <!-- <aside id="favorites" class="favorites-sidebar">
+            <h2>Favorite Countries: </h2>
+            <div id="favoritesList" class="favorites-list"></div>
+        </aside>    -->
     </div>
+    
+    <footer>
+        <p>&copy; 2026 Country Search App</p>
+    </footer>
 
     <script src="cache.js"></script>
     <script src="countryService.js"></script>
     <script src="ui.js"></script>
     <script src="app.js"></script>
+    <script>
+        const btn = document.getElementById('toggle-theme');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 
 </html>

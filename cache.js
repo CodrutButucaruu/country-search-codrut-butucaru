@@ -48,6 +48,14 @@ class CacheManager {
         return history;
     }
 
+    updateFavorites(query) {
+        if (!query.trim()) return;
+        let favorites = this.getFavorites();
+        favorites = [query, ...favorites.filter(item => item !== query)].slice(0, 10);
+        localStorage.setItem('favorite', JSON.stringify(favorites));
+        return favorites;
+    }
+
     getFavorites() {
         return JSON.parse(localStorage.getItem('favorite') || '[]');
     }

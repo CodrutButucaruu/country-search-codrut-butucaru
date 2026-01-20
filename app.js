@@ -8,8 +8,9 @@ class CountrySearchApp {
         this.countryService = new CountryService();
         this.cache = new CacheManager();
         this.ui = new UIRenderer(this.resultsEl);
-        
+        this.ui.renderFavorites(this.cache.getFavorites());
         this.init();
+
     }
 
     init() {
@@ -39,8 +40,8 @@ class CountrySearchApp {
 
     search() {
         const q = this.input.value.trim();
-        if (q.length < 3) {
-            this.updateStatus('Type at least 3 characters.');
+        if (q.length < 1) {
+            this.updateStatus('Type at least 1 character.');
             return;
         }
         
@@ -90,6 +91,9 @@ class CountrySearchApp {
         if (favoriteBtn) {
             favoriteBtn.textContent = this.cache.isFavorite(countryName) ? '★' : '☆';
         }
+
+        const favorites = this.cache.getFavorites(countryName);
+        this.ui.renderFavorites(favorites);
     }
 }
 

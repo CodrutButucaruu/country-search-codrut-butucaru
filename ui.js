@@ -43,6 +43,7 @@ class UIRenderer {
         const mapRow = document.createElement('div');
         const lMap = document.createElement('span');
         lMap.textContent = 'Map:';
+        // to do small functions
         const link = document.createElement('a');
         link.href = mapsUrl;
         link.target = '_blank';
@@ -70,6 +71,7 @@ class UIRenderer {
 
         return wrapper;
     }
+    // to do a main render function + another small render functions instead of renderCountryCard 
 
     showResults(items) {
         this.resultsEl.textContent = '';
@@ -98,6 +100,25 @@ class UIRenderer {
         }
         
         historyEl.innerHTML = '<h3>Recent Searches:</h3>' + history.map(item => 
+            `<button onclick="app.searchFromHistory('${item}')">${item}</button>`
+        ).join('');
+    }
+
+    renderFavorites(history) {
+        const searchbar = document.querySelector('.searchbar');      
+        let favoritesListEl = document.getElementById('favoritesList');
+        if (!favoritesListEl) {
+            favoritesListEl = document.createElement('div');
+            favoritesListEl.id = 'favoritesList';
+            searchbar.insertAdjacentElement('afterend', favoritesListEl);
+        }
+
+        if (this.cache.getFavorites().length === 0) {
+            favoritesListEl.innerHTML = '<p>No favorite countries yet. Click the ☆ button on a country card to add it to favorites.<p>';
+            return;
+        }
+
+        favoritesListEl.innerHTML = '<h3>Favorites:</h3>' + history.map(item => 
             `<button onclick="app.searchFromHistory('${item}')">${item}</button>`
         ).join('');
     }
