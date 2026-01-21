@@ -1,0 +1,79 @@
+// stiluri de baza pt body, headings, etc..
+@use 'variables' as v;
+@use 'colors' as c;
+
+html {
+    overscroll-behavior: none;
+}
+
+header {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: v.$space-7;
+}
+
+body {
+    font-family: v.$font-base;
+    background-image: c.$bg-image-light;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: v.$space-6;
+    color: c.$black;
+    height: 100%;
+    margin: 0;
+}
+
+body.dark-mode {
+    background-image: c.$bg-image-dark;
+    background-size: cover;
+    background-attachment: fixed;
+    color: c.$black;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: v.$space-5;
+    font-size: clamp(1.5rem, 4vw, 2rem); // vw -viewport width: 4vw: 4% of the viewport s widht
+    color: c.$primary;
+}
+
+// .container {
+//     max-width: v.$container-narrow; 
+//     margin-inline: auto;
+//     padding-inline: v.$space-4;
+// }
+
+main {
+    flex: 1 1 auto; // grow and shrink
+    min-width: 0;
+    display: block;
+}
+
+// main.container {
+//     max-width: v.$container-max;
+//     margin-inline: auto;
+//     padding-inline: v.$space-4;
+// }
+
+.hint {
+    text-align: center;
+    color: c.$muted;
+    margin-bottom: v.$space-4;
+    font-size: v.$fs-sm;
+}
+
+#status.error { color: c.$error; }
+
+footer {
+    text-align: center;
+    margin-top: v.$space-7;
+    color: c.$footer-text;
+    font-size: v.$fs-sm;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    background-color: c.$footer-bg; 
+}
+
+
+

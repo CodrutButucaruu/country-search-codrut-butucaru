@@ -4,38 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Country Search</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+    
 </head>
 
 <body>
-    <header class="container">
+    <header>
         <h1>Country Search</h1>
+        <button id="toggle-theme"> 🌙 </button>
+    </header>    
 
+    <main>
         <nav class="searchbar">
             <input id="q" type="text" placeholder="ex: romania, germany, france..." />
             <button id="btn">Search</button>
-            <button id="toggle-theme"> 🌙 </button>
         </nav>
-    </header>
 
-    <div class="wrapper">
-        <!-- <nav class="sidebar">
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav> -->
-        <main>
-            <section id="results" class="results container"></section>
-            <aside id="status" class="hint">Type a country name and press „Search".</aside>
-        </main>
-        <!-- <aside id="favorites" class="favorites-sidebar">
-            <h2>Favorite Countries: </h2>
-            <div id="favoritesList" class="favorites-list"></div>
-        </aside>    -->
-    </div>
+        <section id="results" class="results"></section>
+        <aside id="status" class="hint">Type a country name and press „Search".</aside>
+     </main>
     
     <footer>
         <p>&copy; 2026 Country Search App</p>

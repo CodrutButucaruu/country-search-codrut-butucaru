@@ -1,0 +1,33 @@
+@use 'mixins' as m;
+@use 'variables' as v;
+@use 'colors' as c;
+
+#btn { @include m.button-base; }
+
+#q {
+    flex: 1 1 12rem;
+    padding: 0.75rem 0.875rem;
+    font-size: v.$fs-base;
+    border: 1px solid c.$input-border;
+    @include m.rounded(v.$radius-md);
+    font-family: inherit;
+
+    &:focus { @include m.focus-ring(); }
+}
+
+#toggle-theme { @include m.button-base; }
+
+// favorite button
+.favorite-btn {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.3125rem;
+  transition: transform 0.2s;
+
+  &:hover { transform: scale(1.5); }
+}

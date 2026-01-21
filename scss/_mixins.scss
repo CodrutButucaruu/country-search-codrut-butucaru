@@ -1,0 +1,27 @@
+@use 'variables' as v;
+@use 'colors' as c;
+
+@mixin rounded($r: v.$radius-md) {
+    border-radius: $r;
+}
+
+@mixin focus-ring($color: c.$link-hover, $alpha: 0.15) {
+    outline: none;
+    border-color: $color;
+    box-shadow: 0 0 0 0.125rem rgba(91, 116, 245, $alpha);
+}
+
+@mixin button-base {
+    padding: v.$space-4 v.$space-5;
+    font-size: v.$fs-base;
+    border: none;
+    background: c.$btn-bg;
+    color: c.$white;
+    @include rounded(v.$radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+
+    &:hover { background: c.$primary; }
+    &:active { background: c.$btn-bg-active; transform: scale(0.98); }
+}

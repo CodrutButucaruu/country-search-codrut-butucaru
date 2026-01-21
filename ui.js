@@ -81,7 +81,7 @@ class UIRenderer {
             return false;
         }
         
-        items.slice(0, 10).forEach((country, index) => {
+        items.slice(0, 21).forEach((country, index) => {
             const card = this.renderCountryCard(country);
             card.setAttribute('data-index', index);
             this.resultsEl.appendChild(card);

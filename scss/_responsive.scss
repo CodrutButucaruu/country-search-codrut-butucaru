@@ -1,0 +1,34 @@
+// media queries
+@use 'variables' as v;
+
+@media (min-width: v.$bp-md) {
+    .searchbar {
+        flex-wrap: nowrap;
+    }
+ 
+    .card {
+        grid-template-columns: 8.75rem 1fr; /* 140px */
+        align-items: center;
+    }
+ 
+    .meta {
+        grid-template-columns: 1fr;
+        gap: 0.5rem 1rem;
+    }
+}
+ 
+@media (min-width: v.$bp-lg) {
+    body {
+        padding: v.$space-7;
+    }
+ 
+    .container {
+        max-width: v.$container-max;
+    }
+}
+
+@media (max-width: v.$bp-md) {
+    .flag {
+        width: 60%;
+    }
+}
