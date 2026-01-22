@@ -77,11 +77,27 @@ class UIRenderer {
         this.resultsEl.textContent = '';
         this.selectedResultIndex = -1;
         
-        if (!items || !items.length) {
-            this._renderPagination
+        if (!items.length) {
+            return false;
         }
         
-        items.slice(0, 45).forEach((country, index) => {
+        items.slice(0, 30).forEach((country, index) => {
+            const card = this.renderCountryCard(country);
+            card.setAttribute('data-index', index);
+            this.resultsEl.appendChild(card);
+        });
+        return true;
+    }
+
+    showAllCountries(items) {
+        this.resultsEl.textContent = '';
+        this.selectedResultIndex = -1;
+
+        if (!items.length) {
+            return false;
+        }
+        
+        items.forEach((country, index) => {
             const card = this.renderCountryCard(country);
             card.setAttribute('data-index', index);
             this.resultsEl.appendChild(card);

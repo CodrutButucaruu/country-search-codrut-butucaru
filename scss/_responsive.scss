@@ -17,16 +17,6 @@
     }
 }
  
-@media (min-width: v.$bp-lg) {
-    body {
-        padding: v.$space-7;
-    }
- 
-    .container {
-        max-width: v.$container-max;
-    }
-}
-
 @media (max-width: v.$bp-md) {
     .flag {
         width: 60%;

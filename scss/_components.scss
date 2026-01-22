@@ -161,3 +161,43 @@
     border-color: c.$primary;
   }
 }
+
+//paginare
+.pager {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.pager .pages {
+    display: inline-flex;
+    gap: .25rem;
+}
+.pager button {
+    padding: .35rem .6rem;
+    border: 1px solid c.$input-border;
+    background: c.$white;
+    @include m.rounded(v.$radius-sm);
+    cursor: pointer;
+      .dark-mode & {
+      background: c.$orange;
+      border-color: c.$primary;
+    }
+}
+.pager button[disabled] {
+    opacity: .5;
+    cursor: not-allowed;
+}
+.pager button.active {
+    background: c.$primary;
+    color: c.$white;
+    border-color: c.$black;
+    @include m.rounded(v.$radius-sm);
+}
+.ellipsis {
+    padding: 0 .25rem;
+    color: c.$primary;
+}
+
+

@@ -3,6 +3,7 @@
 @use 'colors' as c;
 
 #btn { @include m.button-base; }
+#all { @include m.button-base; }
 
 #q {
     flex: 1 1 12rem;
