@@ -19,6 +19,16 @@
         box-shadow: 0 0.25rem 0.75rem rgba(32, 30, 30, 0.1);
         background-color: c.$primary;
     }
+
+    .dark-mode & {
+      background: c.$orange;
+      border-color: c.$primary;
+
+      &:hover {
+        box-shadow: 0 0.25rem 0.75rem rgba(32, 30, 30, 0.1);
+        background-color: c.$primary;
+      }
+    }
 }
 
 .flag {
@@ -74,17 +84,33 @@
   button {
     margin: v.$space-1;
     padding: 0.5rem 0.75rem;
-    background: #f0f0f0;
+    background: c.$grey;
     border: 1px solid c.$input-border;
     @include m.rounded(v.$radius-sm);
     cursor: pointer;
     font-size: v.$fs-sm;
+
+    .dark-mode & {
+      background: c.$black;
+      color: c.$orange;
+      border-color: c.$primary;
+
+      &:hover {
+        background: c.$primary;
+        transform: scale(1.15);
+      }
+    }
 
     &:hover {
       background: c.$primary;
       transform: scale(1.15);
     }
   }
+
+  .dark-mode & {
+      background: c.$orange;
+      border-color: c.$primary;
+    }
 
   p {
     font-size: v.$fs-sm;
@@ -107,15 +133,31 @@
   button {
     margin: v.$space-1;
     padding: 0.5rem 0.75rem;
-    background: #f0f0f0;
+    background: c.$grey;
     border: 1px solid c.$input-border;
     @include m.rounded(v.$radius-sm);
     cursor: pointer;
     font-size: v.$fs-sm;
 
+    .dark-mode & {
+      background: c.$black;
+      color: c.$orange;
+      border-color: c.$primary;
+
+      &:hover {
+        background: c.$primary;
+        transform: scale(1.15);
+      }
+    }
+
     &:hover {
       background: c.$primary;
       transform: scale(1.15);
     }
+  }
+
+  .dark-mode & {
+    background: c.$orange;
+    border-color: c.$primary;
   }
 }

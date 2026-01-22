@@ -31,4 +31,13 @@
   gap: v.$space-3;
   margin-bottom: v.$space-4;
   flex-wrap: wrap;
+
+  .dark-mode & {
+    // background: c.$orange;
+    border-color: c.$primary;
+    input[type="text"] {
+        background: c.$orange;
+    }
+  }
 }
+

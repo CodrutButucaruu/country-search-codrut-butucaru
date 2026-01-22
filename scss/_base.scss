@@ -15,19 +15,15 @@ header {
 
 body {
     font-family: v.$font-base;
-    background-image: c.$bg-image-light;
-    background-size: cover;
-    background-attachment: fixed;
-    padding: v.$space-6;
+    background-color: c.$white;
     color: c.$black;
+    padding: v.$space-6;
     height: 100%;
     margin: 0;
 }
 
 body.dark-mode {
-    background-image: c.$bg-image-dark;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: c.$black;
     color: c.$black;
 }
 
@@ -55,6 +51,23 @@ main {
 //     margin-inline: auto;
 //     padding-inline: v.$space-4;
 // }
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    h1 {
+        text-align: start;
+        text-decoration: underline;
+        font-style: italic;
+    }
+    p {
+        font-size: v.$fs-lg; 
+        color: c.$primary;
+        font-style: italic;
+    }
+}
 
 .hint {
     text-align: center;

@@ -40,8 +40,8 @@ class CountrySearchApp {
 
     search() {
         const q = this.input.value.trim();
-        if (q.length < 1) {
-            this.updateStatus('Type at least 1 character.');
+        if (q.length < 3) {
+            this.updateStatus('Type at least 3 character.');
             return;
         }
         

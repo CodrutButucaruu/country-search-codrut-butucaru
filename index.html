@@ -10,8 +10,11 @@
 
 <body>
     <header>
-        <h1>Country Search</h1>
-        <button id="toggle-theme"> 🌙 </button>
+        <section class="logo">
+            <h1>Country Search</h1>
+            <p>A country search that lets users quickly find a specific country by typing the name of the country into the search field.</p>
+        </section>
+        <button id="toggle-theme">☀️</button>
     </header>    
 
     <main>
@@ -32,12 +35,7 @@
     <script src="countryService.js"></script>
     <script src="ui.js"></script>
     <script src="app.js"></script>
-    <script>
-        const btn = document.getElementById('toggle-theme');
-        btn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
+    <script src="theme.js"></script>
 </body>
 
 </html>

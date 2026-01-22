@@ -21,19 +21,15 @@ header {
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  background-image: url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 2rem;
+  background-color: #ffffff;
   color: #0d1b2a;
+  padding: 2rem;
   height: 100%;
   margin: 0;
 }
 
 body.dark-mode {
-  background-image: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80");
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #0d1b2a;
   color: #0d1b2a;
 }
 
@@ -48,6 +44,22 @@ main {
   flex: 1 1 auto;
   min-width: 0;
   display: block;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.logo h1 {
+  text-align: start;
+  text-decoration: underline;
+  font-style: italic;
+}
+.logo p {
+  font-size: 1.125rem;
+  color: #1ea896;
+  font-style: italic;
 }
 
 .hint {
@@ -94,6 +106,12 @@ footer {
   gap: 0.75rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
+}
+.dark-mode .searchbar {
+  border-color: #1ea896;
+}
+.dark-mode .searchbar input[type=text] {
+  background: #ff9f57;
 }
 
 #btn {
@@ -179,6 +197,14 @@ footer {
   box-shadow: 0 0.25rem 0.75rem rgba(32, 30, 30, 0.1);
   background-color: #1ea896;
 }
+.dark-mode .card {
+  background: #ff9f57;
+  border-color: #1ea896;
+}
+.dark-mode .card:hover {
+  box-shadow: 0 0.25rem 0.75rem rgba(32, 30, 30, 0.1);
+  background-color: #1ea896;
+}
 
 .flag {
   width: 100%;
@@ -233,15 +259,28 @@ footer {
 #favoritesList button {
   margin: 0.25rem;
   padding: 0.5rem 0.75rem;
-  background: #f0f0f0;
+  background: #e3e6ea;
   border: 1px solid #cbd5e1;
   border-radius: 0.375rem;
   cursor: pointer;
   font-size: 0.875rem;
 }
+.dark-mode #favoritesList button {
+  background: #0d1b2a;
+  color: #ff9f57;
+  border-color: #1ea896;
+}
+.dark-mode #favoritesList button:hover {
+  background: #1ea896;
+  transform: scale(1.15);
+}
 #favoritesList button:hover {
   background: #1ea896;
   transform: scale(1.15);
+}
+.dark-mode #favoritesList {
+  background: #ff9f57;
+  border-color: #1ea896;
 }
 #favoritesList p {
   font-size: 0.875rem;
@@ -264,15 +303,28 @@ footer {
 #history button {
   margin: 0.25rem;
   padding: 0.5rem 0.75rem;
-  background: #f0f0f0;
+  background: #e3e6ea;
   border: 1px solid #cbd5e1;
   border-radius: 0.375rem;
   cursor: pointer;
   font-size: 0.875rem;
 }
+.dark-mode #history button {
+  background: #0d1b2a;
+  color: #ff9f57;
+  border-color: #1ea896;
+}
+.dark-mode #history button:hover {
+  background: #1ea896;
+  transform: scale(1.15);
+}
 #history button:hover {
   background: #1ea896;
   transform: scale(1.15);
+}
+.dark-mode #history {
+  background: #ff9f57;
+  border-color: #1ea896;
 }
 
 @media (min-width: 54rem) {
